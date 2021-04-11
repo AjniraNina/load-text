@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<style>
+  .test:hover {
+  font-size: 0;
+}
+
+.test:hover:before {
+  font-size: 20px;
+  content: attr(data-hover);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  border: 5px solid black;
+  padding: 200px 100px;
+}
+
+.text {
+  font-size: 17px;
+}
+
+
+</style>
+
+
+<body>
+
+
+
+
+
+    <div  id="output">
+<p id="output">
+Your daily dose of fashion strategy.</p>
+</div>
+</body>
+<script>
+
+window.addEventListener("keydown", function(e) {
+   if(e.key === "Enter") {
+      alert("Fashion is danger!");
+    }
+});
+
+
+
+
+
+
+
+
+const button = document.getElementById('output');
+    const stringsArray = ['Why are you clicking me?', 'Fashion is danger!','Stop', 'Posing, posing for a portrait...','Posing a threat...', 'Stop clicking me!', 'You are larger than life with just a hint of lace.','Fashion is the armor to survive the reality of everyday life.', 'Clothes mean nothing until someone lives in them.'  ];
+    let index = 0;
+    
+    button.addEventListener('click', (event) => {
+      if (index > 9) {
+        index = 0;
+      }
+
+      document.getElementById("output").innerHTML = stringsArray[index];
+index++
+
+    }
+    
+    )
+    button.onmouseout = function (){
+  document.getElementById("output").innerHTML = stringsArray[index];
+index
+}
+button.onmouseover = function () {
+  output.innerHTML = "Don't click me";
+}
+
+
+    </script>
+</html>
